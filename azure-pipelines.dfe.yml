@@ -16,9 +16,7 @@ pr: [ 'master', 'dev' ]
 
 jobs:
   - job: 'Frontend'
-    pool:
-      vmImage: 'ubuntu-20.04'
-      demands: azureps
+    pool: Default
     steps:
       - task: NodeTool@0
         displayName: 'Install Node.js $(NODE_VERSION)'
