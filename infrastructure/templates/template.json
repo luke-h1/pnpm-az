@@ -71,7 +71,7 @@
       "sku": {
         "name": "[parameters('sku')]"
       },
-      "kind": "app,linux",
+      "kind": "app",
       "dependsOn": [],
       "properties": {
         "reserved": true
@@ -81,7 +81,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2021-02-01",
       "name": "ees-pnpm-linux",
-      "kind": "app,linux",
+      "kind": "app",
       "location": "[parameters('location')]",
       "properties": {
         "enabled": true,
