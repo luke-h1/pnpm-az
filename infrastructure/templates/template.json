@@ -34,7 +34,7 @@
     // EES existing frontend environment variables end
     "webAppName": {
       "type": "string",
-      "defaultValue": "ees-pnpm-linux-container",
+      "defaultValue": "ees-pnpm-linux",
       "minLength": 2,
       "metadata": {
         "description": "Web app name."
@@ -56,7 +56,7 @@
     },
     "publicAppInsights": {
       "type": "string",
-      "defaultValue": "ees-pnpm-linux-container-app-insights"
+      "defaultValue": "ees-pnpm-linux-app-insights"
     }
   },
   "variables": {
@@ -106,7 +106,7 @@
         "NOTIFICATION_API_BASE_URL": "[parameters('notifyApiUrl')]",
         "NEXT_CONFIG_MODE": "server",
         "NODE_ENV": "production",
-        "PUBLIC_URL": "https://ees-pnpm-linux-container.azurewebsites.net/"
+        "PUBLIC_URL": "https://ees-pnpm-linux.azurewebsites.net/"
       },
       "identity": {
         "type": "SystemAssigned"
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "name": "ees-pnpm-linux-container/appsettings",
+      "name": "ees-pnpm-linux/appsettings",
       "type": "Microsoft.Web/sites/config",
       "location": "[resourceGroup().location]",
       "apiVersion": "2021-02-01",
@@ -133,7 +133,7 @@
         "NOTIFICATION_API_BASE_URL": "[parameters('notifyApiUrl')]",
         "NEXT_CONFIG_MODE": "server",
         "NODE_ENV": "production",
-        "PUBLIC_URL": "https://ees-pnpm-linux-container.azurewebsites.net/",
+        "PUBLIC_URL": "https://ees-pnpm-linux.azurewebsites.net/",
         "WEBSITE_NODE_DEFAULT_VERSION": "16.14.2"
       }
     }
