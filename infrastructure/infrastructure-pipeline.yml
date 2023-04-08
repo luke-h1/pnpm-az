@@ -1,0 +1,25 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - infrastructure/*
+    exclude:
+    - README.md
+pr: none
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzSKARMTemplateChecker@4
+  enabled: false
+  inputs:
+    ARMTemplateFilePath: '$(System.DefaultWorkingDirectory)/infrastructure/templates/'
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'arm-template'
+    targetPath: 'infrastructure'
